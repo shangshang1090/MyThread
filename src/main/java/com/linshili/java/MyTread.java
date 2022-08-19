@@ -1,6 +1,7 @@
 package com.linshili.java;
 
-public class MyTread extends Thread{
+public  class MyTread extends Thread{
+
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
