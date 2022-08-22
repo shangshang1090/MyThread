@@ -3,7 +3,8 @@ package com.linshili.ThreadCommunication;
 public class share {
     private int num=0;
     public synchronized void incr() throws Exception {
-        if(num!=0){
+        //用while代替if解决虚假唤醒问题
+        while(num!=0){
             this.wait();
         }
         num++;
@@ -11,7 +12,7 @@ public class share {
         this.notifyAll();
     }
     public synchronized void decr() throws Exception {
-        if(num!=1){
+        while(num!=1){
             this.wait();
         }
         num--;
