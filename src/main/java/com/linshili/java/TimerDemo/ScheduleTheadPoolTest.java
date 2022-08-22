@@ -5,8 +5,8 @@ import java.util.concurrent.*;
 
 public class ScheduleTheadPoolTest {
     public static void main(String[] args) {
-        //线程池是定时器
-        ScheduledExecutorService pool = Executors.newScheduledThreadPool(3);
+        //线程池是定时器，固定线程的
+        ScheduledExecutorService pool = Executors.newScheduledThreadPool(10);
         //开启定时任务
         pool.scheduleAtFixedRate(new Runnable() {
             @Override

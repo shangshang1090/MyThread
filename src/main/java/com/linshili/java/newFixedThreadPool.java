@@ -1,6 +1,5 @@
 package com.linshili.java;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -12,5 +11,6 @@ public class newFixedThreadPool {
         Future<String> submit = pool.submit(new MyCallable(50));
         String s = submit.get();
         System.out.println(s);
+
     }
 }
