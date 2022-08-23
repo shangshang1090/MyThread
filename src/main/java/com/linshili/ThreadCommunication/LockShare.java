@@ -36,9 +36,5 @@ public class LockShare {
             lock.unlock();
         }
 
-
-
     }
-
-
 }
