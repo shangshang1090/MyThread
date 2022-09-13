@@ -16,6 +16,6 @@ public class countDownTest {
             }
         }).start();
         count.await();
-        System.out.println("锁门");
+        System.out.println(Thread.currentThread().getName()+"锁门");
     }
 }
